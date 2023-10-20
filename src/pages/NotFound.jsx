@@ -1,7 +1,6 @@
 import { useEffect  } from 'react'
 import { Link } from 'react-router-dom';
-import { AwesomeButton } from 'react-awesome-button';
-import 'react-awesome-button/dist/styles.css';
+import ReactiveButton from 'reactive-button';
 import "../assets/styles.css";
 
 
@@ -18,7 +17,15 @@ function NotFound() {
             <div class="glitch-wrapper">
                <div class="glitch" data-glitch="404 - Page Not Found">404 - Page Not Found</div>
             </div>
-            <Link to="/"><AwesomeButton type="secondary">Home</AwesomeButton></Link>
+            <Link to="/">
+              <ReactiveButton
+                shadow
+                outline 
+                color="red"
+                idleText={"Home"}
+                size="large"
+              />
+            </Link>
             
          </div>
       </div>
